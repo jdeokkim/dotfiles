@@ -1,0 +1,52 @@
+#
+# Copyright (c) 2024 Jaedeok Kim (jdeokkim@protonmail.com)
+#
+
+# ============================================================================>
+
+escape C-w
+
+# ============================================================================>
+
+unbind A
+unbind C-A
+unbind C-aphostrophe
+unbind C-S
+unbind C-c
+unbind C-exclam
+unbind C-f
+unbind C-g
+unbind C-i
+unbind C-m
+unbind C-n
+unbind C-p
+unbind C-s
+unbind C-u
+unbind C-underscore
+unbind C-v
+unbind M-Tab
+unbind N
+unbind P
+unbind R
+
+unbind aphostrophe
+unbind c
+unbind f
+unbind i
+unbind s
+unbind v
+
+# ============================================================================>
+
+bind R restart
+
+bind backslash hsplit
+bind bar hsplit
+bind minus vsplit
+
+bind c exec kitty
+bind f exec firefox
+bind s swap
+bind t title
+
+# ============================================================================>
