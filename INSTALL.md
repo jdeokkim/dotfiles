@@ -17,7 +17,7 @@ Password: voidlinux
 2. Mirror: Asia
     - https://repo.jing.rocks/voidlinux/ (Tokyo, Japan (Tier 2))
 3. Hostname: `void`
-4. Locale: `ko_KR.UTF-8`
+4. Locale: `en_US.UTF-8`
 5. Timezone: `Asia/Seoul`
 6. RootPassword: ?
 7. UserAccount: ?
@@ -33,6 +33,8 @@ Password: voidlinux
 11. Install
 
 Void Linux 설치가 끝나면, 재부팅을 하지 않고 설치 프로그램을 빠져나와 터미널로 복귀한다.
+
+<br />
 
 ## GRUB 부트로더 설치하기
 
@@ -56,3 +58,47 @@ Installation finished. No error reported.
 # umount -R /mnt
 # shutdown -r now
 ```
+
+<br />
+
+## 기본 패키지 설치하기
+
+```
+$ sudo xbps-install -u xbps
+$ sudo xbps-install base-devel eudev eudev-libudev git kitty vim xorg
+```
+
+<br />
+
+## 콘솔 글꼴 변경하기
+
+```
+$ sudo xbps-install terminus-font
+$ ls /usr/share/kbd/consolefonts
+$ sudo vim /etc/rc.conf
+```
+
+```
+FONT="ter-v16n"
+```
+
+<br />
+
+## [`sdorfehs`](https://github.com/jcs/sdorfehs) WM (Window Manager) 설치하기
+
+```
+$ sudo xbps-install freetype-devel libX11-devel libXft-devel libXrandr-devel libXres-devel libXtst-devel
+$ git clone https://github.com/jcs/sdorfehs && cd sdorfehs
+$ make && sudo make install
+```
+
+<br />
+
+## 한글 글꼴 설치하기
+
+```
+$ sudo xbps-query -Rs font
+$ sudo xbps-install fonts-nanum-ttf fonts-roboto-ttf nerd-fonts noto-fonts-cjk
+```
+
+<br />
