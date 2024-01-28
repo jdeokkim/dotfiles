@@ -66,7 +66,7 @@ Installation finished. No error reported.
 ```
 $ sudo xbps-install -u xbps
 $ sudo xbps-install base-devel curl dbus eudev eudev-libudev git kitty \
-> neofetch ripgrep vim wget xorg
+    neofetch ripgrep scrot vim wget xorg
 $ sudo ln -s /etc/sv/dbus /var/service
 ```
 
@@ -81,10 +81,24 @@ $ sudo vim /etc/rc.conf
 ```
 
 ```
+# Set RTC to UTC or localtime.
+HARDWARECLOCK="localtime"
+
+# Console font to load, see setfont(8).
 FONT="ter-v16n"
 ```
 
 <br />
+
+## `chronyd` NTP (Network Time Protocol) 데몬 설치하기
+
+```
+$ sudo xbps-install chrony
+$ sudo ln -s /etc/sv/chronyd /var/service
+$ sudo reboot 
+```
+
+<br /> 
 
 ## [`sdorfehs`](https://github.com/jcs/sdorfehs) 창 관리자 설치하기
 
@@ -150,4 +164,18 @@ $ fcitx5-configtool
 1. "Available Input Method"에서 "Hangul"을 찾아 왼쪽에 추가한다.
 2. "Global Options" 탭의 "Trigger Input Method" 키를 변경한다.
 
-<br /> 
+<br />
+
+## [`vim-plug`](https://github.com/junegunn/vim-plug) 플러그인 관리자 설치하기
+
+```
+$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+$ vim ~/.vimrc
+```
+
+```
+:PlugInstall
+```
+
+<br />
