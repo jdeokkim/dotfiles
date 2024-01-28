@@ -4,28 +4,41 @@
 
 # ============================================================================>
 
+exec ~/.fehbg &
+exec picom -b --config ~/.config/picom/picom.conf
+
+# ============================================================================>
+
+set startupmessage 0
+
+# ============================================================================>
+
 escape C-w
 
 # ============================================================================>
 
 unbind A
 unbind C-A
-unbind C-aphostrophe
+unbind C-K
 unbind C-S
+unbind C-aphostrophe
 unbind C-c
 unbind C-exclam
 unbind C-f
 unbind C-g
 unbind C-i
+unbind C-k
 unbind C-m
 unbind C-n
 unbind C-p
+unbind C-r
 unbind C-s
 unbind C-u
 unbind C-underscore
 unbind C-v
 unbind M-Tab
 unbind N
+unbind Q
 unbind P
 unbind R
 
@@ -38,6 +51,7 @@ unbind v
 
 # ============================================================================>
 
+bind Q quit 
 bind R restart
 
 bind backslash hsplit
@@ -48,5 +62,25 @@ bind c exec kitty
 bind f exec firefox
 bind s swap
 bind t title
+bind z remove
+
+# ============================================================================>
+
+set font NeoDunggeunmo
+
+# ============================================================================>
+
+set bgcolor #3C3E50
+set barpadding 12 6
+set barsticky 1
+
+# ============================================================================>
+
+set gap 8
+set padding 16 16 16 16
+
+# ============================================================================>
+
+set vscreens 4
 
 # ============================================================================>

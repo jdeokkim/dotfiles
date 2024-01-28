@@ -65,7 +65,7 @@ Installation finished. No error reported.
 
 ```
 $ sudo xbps-install -u xbps
-$ sudo xbps-install base-devel eudev eudev-libudev git kitty vim xorg
+$ sudo xbps-install base-devel curl eudev eudev-libudev git kitty vim wget xorg
 ```
 
 <br />
@@ -98,7 +98,35 @@ $ make && sudo make install
 
 ```
 $ sudo xbps-query -Rs font
-$ sudo xbps-install fonts-nanum-ttf fonts-roboto-ttf nerd-fonts noto-fonts-cjk
+$ sudo xbps-install fonts-nanum-ttf fonts-roboto-ttf google-fonts-ttf nerd-fonts noto-fonts-cjk 
+$ sudo ln -s /usr/share/fontconfig/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
+```
+
+```
+$ wget https://github.com/Dalgona/neodgm/releases/download/v1.530/neodgm.ttf
+$ sudo mkdir -p /usr/share/fonts/neodgm
+$ sudo mv neodgm.ttf /usr/share/fonts/neodgm/.
+$ sudo fc-cache -fv
+```
+
+<br />
+
+## [`feh`](https://github.com/derf/feh) 이미지 뷰어로 배경 화면 설정하기
+
+```
+$ sudo xbps-install feh
+$ feh --bg-fill ~/.walls/void.png
+```
+
+<br />
+
+## [`picom`](https://github.com/yshui/picom) 컴포지터 설치하기 
+
+```
+$ sudo xbps-install picom
+$ sudo xbps-query -Rf picom | grep .conf
+$ mkdir -p ~/.config/picom
+$ cp /usr/share/examples/picom/picom.sample.conf ~/.config/picom/picom.conf
 ```
 
 <br />
