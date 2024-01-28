@@ -65,7 +65,8 @@ Installation finished. No error reported.
 
 ```
 $ sudo xbps-install -u xbps
-$ sudo xbps-install base-devel curl eudev eudev-libudev git kitty vim wget xorg
+$ sudo xbps-install base-devel curl dbus eudev eudev-libudev git kitty \
+> neofetch ripgrep vim wget xorg
 ```
 
 <br />
@@ -84,7 +85,7 @@ FONT="ter-v16n"
 
 <br />
 
-## [`sdorfehs`](https://github.com/jcs/sdorfehs) WM (Window Manager) 설치하기
+## [`sdorfehs`](https://github.com/jcs/sdorfehs) 창 관리자 설치하기
 
 ```
 $ sudo xbps-install freetype-devel libX11-devel libXft-devel libXrandr-devel libXres-devel libXtst-devel
@@ -130,3 +131,15 @@ $ cp /usr/share/examples/picom/picom.sample.conf ~/.config/picom/picom.conf
 ```
 
 <br />
+
+## [`fcitx5`](https://github.com/fcitx/fcitx5) 입력 방식 편집기 설치하기
+
+```
+$ sudo xbps-install fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-hangul fcitx5-qt
+$ fcitx5-configtool
+```
+
+1. "Available Input Method"에서 "Hangul"을 찾아 왼쪽에 추가한다.
+2. "Global Options" 탭의 "Trigger Input Method" 키를 변경한다.
+
+<br /> 
