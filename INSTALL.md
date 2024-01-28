@@ -137,6 +137,7 @@ $ sudo fc-cache -fv
 ```
 $ sudo xbps-install feh
 $ feh --bg-fill ~/.walls/void.png
+$ mkdir -p ~/Pictures
 ```
 
 <br />
@@ -179,3 +180,5 @@ $ vim ~/.vimrc
 ```
 
 <br />
+
+

@@ -4,7 +4,10 @@
 
 # ============================================================================>
 
+exec ~/.config/sdorfehs/bar-script.sh &
 exec ~/.fehbg &
+
+exec fcitx5 -d &
 exec picom -b --config ~/.config/picom/picom.conf
 
 # ============================================================================>
@@ -51,6 +54,7 @@ unbind v
 
 # ============================================================================>
 
+bind Print exec scrot --exec 'feh $f' --file '/home/jdeokkim/Pictures/%Y%m%d_%H%M%S.png' --quality 100 
 bind Q quit 
 bind R restart
 
