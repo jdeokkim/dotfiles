@@ -67,6 +67,7 @@ Installation finished. No error reported.
 $ sudo xbps-install -u xbps
 $ sudo xbps-install base-devel curl dbus eudev eudev-libudev git kitty \
 > neofetch ripgrep vim wget xorg
+$ sudo ln -s /etc/sv/dbus /var/service
 ```
 
 <br />
@@ -91,6 +92,11 @@ FONT="ter-v16n"
 $ sudo xbps-install freetype-devel libX11-devel libXft-devel libXrandr-devel libXres-devel libXtst-devel
 $ git clone https://github.com/jcs/sdorfehs && cd sdorfehs
 $ make && sudo make install
+```
+
+```
+$ git clone https://github.com/nestoris/Win98SE.git
+$ cd Win98SE && sudo mv SE98/ /usr/share/icons/SE98/
 ```
 
 <br />
@@ -138,6 +144,8 @@ $ cp /usr/share/examples/picom/picom.sample.conf ~/.config/picom/picom.conf
 $ sudo xbps-install fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-hangul fcitx5-qt
 $ fcitx5-configtool
 ```
+
+<br />
 
 1. "Available Input Method"에서 "Hangul"을 찾아 왼쪽에 추가한다.
 2. "Global Options" 탭의 "Trigger Input Method" 키를 변경한다.
