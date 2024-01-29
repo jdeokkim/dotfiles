@@ -61,6 +61,46 @@ Installation finished. No error reported.
 
 <br />
 
+## Wi-Fi 연결하기
+
+```
+$ sudo sv up wpa_supplicant
+$ ip link show
+$ wpa_cli -i wlp0s20f3
+```
+
+```
+wpa_cli v2.10
+
+Copyright (c) 2004-2022, Jouni Malinen <j@w1.fi> and contributors
+
+This software may be distributed under the terms of the BSD license.
+See README for more details.
+
+Selected interface 'wlp0s20f3'
+
+Interactive mode
+
+> add_network
+> set_network 0 ssid "<SSID>"
+> set_network 0 psk "<PASSWORD>"
+> enable_network 0
+> quit
+```
+
+```
+$ sudo xbps-install NetworkManager
+$ sudo rm /var/service/wpa_supplicant
+$ sudo ln -s /etc/sv/NetworkManager /var/service/ 
+```
+
+```
+$ nmcli device wifi list
+$ nmcli device wifi connect "<SSID>" password "<PASSWORD>"
+```
+
+<br />
+
 ## 기본 패키지 설치하기
 
 ```
@@ -95,6 +135,16 @@ FONT="ter-v16n"
 ```
 $ sudo xbps-install chrony
 $ sudo ln -s /etc/sv/chronyd /var/service
+$ sudo reboot 
+```
+
+<br />
+
+## [`bluetoothd`](https://github.com/bluez/bluez) 블루투스 서비스 설치하기
+
+```
+$ sudo xbps-install bluez
+$ sudo usermod -a -G bluetooth jdeokkim
 $ sudo reboot 
 ```
 
