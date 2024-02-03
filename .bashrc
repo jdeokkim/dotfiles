@@ -13,6 +13,10 @@ alias ls='ls --color=auto'
 
 # ============================================================================>
 
+alias discord='flatpak run com.discordapp.Discord'
+
+# ============================================================================>
+
 source ~/.git-prompt.sh
 
 PROMPT_COMMAND='PS1_CMD1=$(__git_ps1 " (%s)")'; 

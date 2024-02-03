@@ -299,3 +299,13 @@ $ vim ~/.vimrc
 
 <br />
 
+## [Discord](https://discord.com) 설치하기
+
+```
+$ sudo xbps-install flatpak xdg-desktop-portal xdg-desktop-portal-gtk
+$ flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
+$ flatpak install flathub com.discordapp.Discord
+$ flatpak run com.discordapp.Discord
+```
+
+<br />
