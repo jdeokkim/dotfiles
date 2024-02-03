@@ -252,6 +252,16 @@ $ mkdir -p ~/Pictures
 
 <br />
 
+## [`picom`](https://github.com/yshui/picom) X11 컴포지터 설치하기
+
+```
+$ sudo xbps-install picom
+$ cp /usr/share/examples/picom/picom.sample.conf ~/.config/picom/picom.conf
+$ picom --config ~/.config/picom/picom.conf
+```
+
+<br />
+
 ## [`fcitx5`](https://github.com/fcitx/fcitx5) 입력 방식 편집기 설치하기
 
 ```

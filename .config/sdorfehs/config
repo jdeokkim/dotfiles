@@ -4,10 +4,16 @@
 
 # ============================================================================>
 
-exec ~/.config/sdorfehs/bar-script.sh &
+exec ~/.config/sdorfehs/bar-script.sh
 exec ~/.fehbg &
 
 exec fcitx5 -d &
+exec picom --config ~/.config/picom/picom.conf &
+exec pipewire &
+
+# ============================================================================>
+
+unmanage gkrellm
 
 # ============================================================================>
 
