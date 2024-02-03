@@ -105,9 +105,11 @@ $ nmcli device wifi connect "<SSID>" password "<PASSWORD>"
 
 ```
 $ sudo xbps-install -u xbps
-$ sudo xbps-install base-devel curl dbus eudev eudev-libudev git kitty \
-    neofetch ripgrep scrot vim wget xorg
-$ sudo ln -s /etc/sv/dbus /var/service
+$ sudo xbps-install acpi base-devel curl dbus elogind eudev eudev-libudev \
+    git kitty neofetch ripgrep scrot vim wget xorg
+$ sudo rm /var/service/acpid
+$ sudo ln -s /etc/sv/dbus /var/service/
+$ sudo ln -s /etc/sv/elogind /var/service/
 ```
 
 <br />
@@ -143,12 +145,27 @@ $ sudo reboot
 ## [`bluetoothd`](https://github.com/bluez/bluez) 블루투스 서비스 설치하기
 
 ```
-$ sudo xbps-install bluez
+$ sudo xbps-install bluez libspa-bluetooth
 $ sudo usermod -a -G bluetooth jdeokkim
 $ sudo reboot 
 ```
 
 <br /> 
+
+## [`PipeWire`](https://pipewire.org) 오디오 서버 설치하기
+
+```
+$ sudo xbps-install alsa-pipewire pavucontrol pipewire
+$ sudo mkdir -p /etc/alsa/conf.d/
+$ sudo mkdir -p /etc/pipewire/pipewire.conf.d/
+$ sudo ln -s /usr/share/alsa/alsa.conf.d/50-pipewire.conf /etc/alsa/conf.d/
+$ sudo ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d/
+$ sudo ln -s /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/
+$ sudo ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
+$ sudo usermod -aG audio jdeokkim
+```
+
+<br />
 
 ## [`sdorfehs`](https://github.com/jcs/sdorfehs) 창 관리자 설치하기
 
@@ -156,6 +173,12 @@ $ sudo reboot
 $ sudo xbps-install freetype-devel libX11-devel libXft-devel libXrandr-devel libXres-devel libXtst-devel
 $ git clone https://github.com/jcs/sdorfehs && cd sdorfehs
 $ make && sudo make install
+```
+
+```
+$ wget https://nightly.link/linusg/serenityos-emoji-font/workflows/build/main/SerenityOS-Emoji.ttf.zip
+$ unzip SerenityOS-Emoji.ttf.zip && sudo mv SerenityOS-Emoji.ttf /usr/share/fonts/TTF/
+$ fc-cache -v
 ```
 
 ```
@@ -192,21 +215,11 @@ $ mkdir -p ~/Pictures
 
 <br />
 
-## [`picom`](https://github.com/yshui/picom) 컴포지터 설치하기 
-
-```
-$ sudo xbps-install picom
-$ sudo xbps-query -Rf picom | grep .conf
-$ mkdir -p ~/.config/picom
-$ cp /usr/share/examples/picom/picom.sample.conf ~/.config/picom/picom.conf
-```
-
-<br />
-
 ## [`fcitx5`](https://github.com/fcitx/fcitx5) 입력 방식 편집기 설치하기
 
 ```
-$ sudo xbps-install fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-hangul fcitx5-qt
+$ sudo xbps-install fcitx5 fcitx5-configtool fcitx5-gtk \
+    fcitx5-hangul fcitx5-qt
 $ fcitx5-configtool
 ```
 
