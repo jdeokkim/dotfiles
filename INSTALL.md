@@ -106,7 +106,7 @@ $ nmcli device wifi connect "<SSID>" password "<PASSWORD>"
 ```
 $ sudo xbps-install -u xbps
 $ sudo xbps-install acpi base-devel curl dbus elogind eudev eudev-libudev \
-    git kitty neofetch ripgrep scrot vim wget xorg
+    firefox git kitty neofetch pcmanfm ripgrep scrot vim wget xorg
 $ sudo rm /var/service/acpid
 $ sudo ln -s /etc/sv/dbus /var/service/
 $ sudo ln -s /etc/sv/elogind /var/service/
@@ -194,6 +194,23 @@ $ fc-cache -v
 ```
 $ git clone https://github.com/nestoris/Win98SE.git
 $ cd Win98SE && sudo mv SE98/ /usr/share/icons/SE98/
+```
+
+<br />
+
+## GTK / KDE / Qt 테마 설정하기
+
+```
+$ sudo xbps-install kvantum nwg-look
+$ mkdir ~/.themes && cd ~/.themes
+$ git clone https://github.com/B00merang-Project/Solaris-9
+$ nwg-look
+```
+
+```
+$ mkdir -p ~/.config/Kvantum/ 
+$ git clone https://www.opencode.net/phob1an/commonality && cd commonality
+$ kvantummanager
 ```
 
 <br />
