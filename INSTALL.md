@@ -158,10 +158,14 @@ $ sudo reboot
 $ sudo xbps-install alsa-pipewire pavucontrol pipewire
 $ sudo mkdir -p /etc/alsa/conf.d/
 $ sudo mkdir -p /etc/pipewire/pipewire.conf.d/
-$ sudo ln -s /usr/share/alsa/alsa.conf.d/50-pipewire.conf /etc/alsa/conf.d/
-$ sudo ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d/
-$ sudo ln -s /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/
-$ sudo ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
+$ sudo ln -s /usr/share/alsa/alsa.conf.d/50-pipewire.conf \
+    /etc/alsa/conf.d/
+$ sudo ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf \
+     /etc/alsa/conf.d/
+$ sudo ln -s /usr/share/examples/wireplumber/10-wireplumber.conf \
+    /etc/pipewire/pipewire.conf.d/
+$ sudo ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf \
+    /etc/pipewire/pipewire.conf.d/
 $ sudo usermod -aG audio jdeokkim
 ```
 
@@ -170,9 +174,15 @@ $ sudo usermod -aG audio jdeokkim
 ## [`sdorfehs`](https://github.com/jcs/sdorfehs) 창 관리자 설치하기
 
 ```
-$ sudo xbps-install freetype-devel libX11-devel libXft-devel libXrandr-devel libXres-devel libXtst-devel
+$ sudo xbps-install freetype-devel libX11-devel libXft-devel \
+    libXrandr-devel libXres-devel libXtst-devel
 $ git clone https://github.com/jcs/sdorfehs && cd sdorfehs
 $ make && sudo make install
+```
+
+```
+$ sudo mv /usr/local/man/man1/sdorfehs.1 /usr/local/share/man/man1/
+$ sudo makewhatis /usr/local/share/man
 ```
 
 ```
@@ -184,6 +194,16 @@ $ fc-cache -v
 ```
 $ git clone https://github.com/nestoris/Win98SE.git
 $ cd Win98SE && sudo mv SE98/ /usr/share/icons/SE98/
+```
+
+<br />
+
+## 마우스 가속도 변경하기
+
+```
+$ xinput list | grep 'Mouse'
+$ xinput list-props 9
+$ xinput set-prop 9 "libinput Accel Speed" -0.55
 ```
 
 <br />
@@ -243,5 +263,4 @@ $ vim ~/.vimrc
 ```
 
 <br />
-
 
