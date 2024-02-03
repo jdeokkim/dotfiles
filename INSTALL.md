@@ -171,6 +171,14 @@ $ sudo usermod -aG audio jdeokkim
 
 <br />
 
+## 셸 프롬프트 메시지 변경하기
+
+```
+$ wget https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh ~/.git-prompt.sh
+```
+
+<br />
+
 ## [`sdorfehs`](https://github.com/jcs/sdorfehs) 창 관리자 설치하기
 
 ```

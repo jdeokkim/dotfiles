@@ -13,14 +13,11 @@ alias ls='ls --color=auto'
 
 # ============================================================================>
 
-PS1='[\u@\h \W]\$ '
+source ~/.git-prompt.sh
 
-# ============================================================================>
+PROMPT_COMMAND='PS1_CMD1=$(__git_ps1 " (%s)")'; 
 
-export GLFW_IM_MODULE=ibus
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export SDL_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
+# PS1='[\u@\h \W]\$ '
+PS1='\w\[\e[32m\]${PS1_CMD1}\[\e[0m\] \[\e[92;1m\]\\$\[\e[0m\] '
 
 # ============================================================================>
