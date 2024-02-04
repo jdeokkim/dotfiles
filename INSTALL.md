@@ -106,7 +106,7 @@ $ nmcli device wifi connect "<SSID>" password "<PASSWORD>"
 ```
 $ sudo xbps-install -u xbps
 $ sudo xbps-install acpi base-devel curl dbus elogind eudev eudev-libudev \
-    firefox git kitty neofetch pcmanfm ripgrep scrot vim wget xorg
+    firefox git gpick kitty neofetch pcmanfm ripgrep scrot vim wget xorg
 $ sudo rm /var/service/acpid
 $ sudo ln -s /etc/sv/dbus /var/service/
 $ sudo ln -s /etc/sv/elogind /var/service/
@@ -282,6 +282,17 @@ $ fcitx5-configtool
 
 1. "Available Input Method"에서 "Hangul"을 찾아 왼쪽에 추가한다.
 2. "Global Options" 탭의 "Trigger Input Method" 키를 변경한다.
+
+<br />
+
+## [`rofi`](https://github.com/davatorium/rofi) 앱 실행기 설치하기
+
+```
+$ sudo xbps-install rofi
+$ mkdir -p ~/.config/rofi
+$ rofi -dump-config > ~/.config/rofi/config.rasi
+$ rofi -show drun
+```
 
 <br />
 
