@@ -184,6 +184,13 @@ $ wget https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh ~
 ```
 $ sudo xbps-install greetd tuigreet
 $ sudo vim /etc/greetd/config.toml
+```
+
+```
+command = "tuigreet --cmd startx --power-reboot 'loginctl reboot' --power-shutdown 'loginctl poweroff'"
+```
+
+```
 $ sudo ln -s /etc/sv/greetd /var/service/
 ```
 
