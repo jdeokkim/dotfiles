@@ -26,7 +26,7 @@ SEPARATOR='^fg(#6A6D8F)/^fg()'
 BATTERY_EMOJI='^fn(Noto Color Emoji)🔋^fn()'
 BATTERY_PERCENT_STR="$BATTERY_EMOJI -%%"
 
-HAS_BATTERY=$(acpi 2>/dev/null | grep -q 'power_supply'; echo $? | bc)
+HAS_BATTERY=$(acpi 2>/dev/null | grep -q 'Battery'; echo $? | bc)
 
 SOUND_EMOJI='^fn(Noto Color Emoji)🔊^fn()'
 SOUND_PERCENT_STR="$SOUND_EMOJI -%%"
@@ -36,8 +36,6 @@ SOUND_PERCENT_STR="$SOUND_EMOJI -%%"
 update_battery_status() {
     if [ $HAS_BATTERY -eq 0 ]; then
         BATTERY_STATUS=$(acpi | grep -q 'Charging'; echo $?)
-    
-        echo $BATTERY_STATUS;
         
         if [ $BATTERY_STATUS -eq 1 ]; then
             BATTERY_EMOJI='^fn(Noto Color Emoji)🔋^fn()'
@@ -66,7 +64,9 @@ update_sound_status() {
     fi
 
     SOUND_VOLUME=$(echo "scale=0;100*($(wpctl get-volume \
-        @DEFAULT_AUDIO_SINK@ | grep -o '[0-9].*'))/1" | bc);
+        @DEFAULT_AUDIO_SINK@ | grep -Eo '[+-]?[0-9]+([.][0-9]+)?'))/1" \
+        | bc
+    );
 
     if [ -z $SOUND_VOLUME ]; then
         SOUND_VOLUME="-"
@@ -74,10 +74,6 @@ update_sound_status() {
 
     SOUND_PERCENT_STR="$SOUND_EMOJI $SOUND_VOLUME%%"    
 }
-
-# ============================================================================>
-
-
 
 # ============================================================================>
 

@@ -105,11 +105,11 @@ $ nmcli device wifi connect "<SSID>" password "<PASSWORD>"
 
 ```
 $ sudo xbps-install -u xbps
-$ sudo xbps-install acpi base-devel curl dbus elogind eudev eudev-libudev \
-    firefox git gpick kitty neofetch pcmanfm ripgrep scrot vim wget xorg
+$ sudo xbps-install acpi base-devel cmatrix curl dbus elogind eudev \
+    eudev-libudev firefox git gpick kitty neofetch pcmanfm ripgrep \
+    scrot tmux vim wget xorg
 $ sudo rm /var/service/acpid
 $ sudo ln -s /etc/sv/dbus /var/service/
-$ sudo ln -s /etc/sv/elogind /var/service/
 ```
 
 <br />
@@ -136,7 +136,7 @@ FONT="ter-v16n"
 
 ```
 $ sudo xbps-install chrony
-$ sudo ln -s /etc/sv/chronyd /var/service
+$ sudo ln -s /etc/sv/chronyd /var/service/
 $ sudo reboot 
 ```
 
@@ -175,6 +175,16 @@ $ sudo usermod -aG audio jdeokkim
 
 ```
 $ wget https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh ~/.git-prompt.sh
+```
+
+<br />
+
+## [`greetd`](https://git.sr.ht/~kennylevinsen/greetd) 디스플레이 관리자 설치하기
+
+```
+$ sudo xbps-install greetd tuigreet
+$ sudo vim /etc/greetd/config.toml
+$ sudo ln -s /etc/sv/greetd /var/service/
 ```
 
 <br />
