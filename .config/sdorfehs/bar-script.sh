@@ -6,10 +6,10 @@
 
 # ============================================================================>
 
-BAR_PID=$(pgrep -f -o "bash .*/bar-script.sh")
-BAR_PIPE=~/.config/sdorfehs/bar
+_bar_pid=$(pgrep -f -o "bash .*/bar-script.sh");
+_bar_pipe=~/.config/sdorfehs/bar;
 
-DAY_NAMES=(
+_day_names=(
     "(일)"
     "(월)" 
     "(화)" 
@@ -17,85 +17,85 @@ DAY_NAMES=(
     "(목)" 
     "(금)" 
     "(토)"
-)
+);
 
-SEPARATOR='^fg(#6A6D8F)/^fg()'
+_has_batteries=$(acpi 2>/dev/null | grep -q 'Battery'; echo $? | bc);
+
+_separator='^fg(#6A6D8F)/^fg()';
 
 # ============================================================================>
 
-BATTERY_EMOJI='^fn(Noto Color Emoji)🔋^fn()'
-BATTERY_PERCENT_STR="$BATTERY_EMOJI -%%"
+battery_emoji='^fn(Noto Color Emoji)🔋^fn()';
+battery_info="$battery_emoji -%%";
 
-HAS_BATTERY=$(acpi 2>/dev/null | grep -q 'Battery'; echo $? | bc)
-
-SOUND_EMOJI='^fn(Noto Color Emoji)🔊^fn()'
-SOUND_PERCENT_STR="$SOUND_EMOJI -%%"
+sound_emoji='^fn(Noto Color Emoji)🔊^fn()';
+sound_info="$sound_emoji -%%";
 
 # ============================================================================>
 
 update_battery_status() {
-    if [ $HAS_BATTERY -eq 0 ]; then
-        BATTERY_STATUS=$(acpi | grep -q 'Charging'; echo $?)
+    if [ $_has_batteries -eq 0 ]; then
+        battery_status=$(acpi | grep -q 'Charging'; echo $?);
         
-        if [ $BATTERY_STATUS -eq 1 ]; then
-            BATTERY_EMOJI='^fn(Noto Color Emoji)🔋^fn()'
+        if [ $battery_status -eq 1 ]; then
+            battery_emoji='^fn(Noto Color Emoji)🔋^fn()';
         else
-            BATTERY_EMOJI='^fn(Noto Color Emoji)🔌^fn()'
+            battery_emoji='^fn(Noto Color Emoji)🔌^fn()';
         fi
 
-        BATTERY_VALUE=$(acpi | grep -o '[0-9]*%')
+        battery_value=$(acpi | grep -o '[0-9]*%');
 
-        if [ -z $BATTERY_VALUE ]; then
-            BATTERY_VALUE="-%"
+        if [ -z $battery_value ]; then
+            battery_value="-%";
         fi
 
-        BATTERY_PERCENT_STR="$BATTERY_EMOJI $BATTERY_VALUE%"
+        battery_info="$battery_emoji $battery_value%";
     fi
 }
 
 update_sound_status() {
-    IS_SOUND_MUTED=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ \
-        | grep -q 'MUTED'; echo $? | bc)
+    is_sound_muted=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ \
+        | grep -q 'MUTED'; echo $? | bc);
 
-    if [ $IS_SOUND_MUTED -eq 0 ]; then
-        SOUND_EMOJI='^fn(Noto Color Emoji)🔇^fn()'
+    if [ $is_sound_muted -eq 0 ]; then
+        sound_emoji='^fn(Noto Color Emoji)🔇^fn()';
     else
-        SOUND_EMOJI='^fn(Noto Color Emoji)🔊^fn()'
+        sound_emoji='^fn(Noto Color Emoji)🔊^fn()';
     fi
 
-    SOUND_VOLUME=$(echo "scale=0;100*($(wpctl get-volume \
+    sound_volume=$(echo "scale=0;100*($(wpctl get-volume \
         @DEFAULT_AUDIO_SINK@ | grep -Eo '[+-]?[0-9]+([.][0-9]+)?'))/1" \
         | bc
     );
 
-    if [ -z $SOUND_VOLUME ]; then
-        SOUND_VOLUME="-"
+    if [ -z $sound_volume ]; then
+        sound_volume="-";
     fi
 
-    SOUND_PERCENT_STR="$SOUND_EMOJI $SOUND_VOLUME%%"    
+    sound_info="$sound_emoji $sound_volume%%"; 
 }
 
 # ============================================================================>
 
 while true; do
-    OUTPUT_STR="$SEPARATOR $SOUND_PERCENT_STR";
+    output_str="$_separator $sound_info";
     
-    if [ $HAS_BATTERY -eq 0 ]; then
-        OUTPUT_STR="${OUTPUT_STR} $SEPARATOR $BATTERY_PERCENT_STR";
+    if [ $_has_batteries -eq 0 ]; then
+        output_str="${output_str} $_separator $battery_info";
     fi
         
-    DAY_INDEX=$(date +"%w")
+    day_index=$(date +"%w");
     
-    DATE_STR=$(date +"%y년 %m월 %d일 ${DAY_NAMES[$DAY_INDEX]}")
-    TIME_STR=$(date +"%H:%M:%S")
+    date_info=$(date +"%y년 %m월 %d일 ${_day_names[$day_index]}");
+    time_info=$(date +"%H:%M:%S");
     
-    OUTPUT_STR="${OUTPUT_STR} $SEPARATOR $DATE_STR";
-    OUTPUT_STR="${OUTPUT_STR} $SEPARATOR $TIME_STR";
+    output_str="${output_str} $_separator $date_info";
+    output_str="${output_str} $_separator $time_info";
 
-    printf "$OUTPUT_STR\n" > $BAR_PIPE;
+    printf "$output_str\n" > $_bar_pipe;
 
     update_battery_status;
     update_sound_status;
 
-    sleep 0.5; 
+    sleep 0.75; 
 done

@@ -13,15 +13,16 @@ exec pipewire &
 
 # ============================================================================>
 
-unmanage gkrellm
-
-# ============================================================================>
-
 set startupmessage 0
 
 # ============================================================================>
 
 escape C-w
+
+definekey top M-1 vselect 0
+definekey top M-2 vselect 1
+definekey top M-3 vselect 2
+definekey top M-4 vselect 3
 
 # ============================================================================>
 
@@ -67,6 +68,7 @@ bind R restart
 bind backslash hsplit
 bind bar hsplit
 bind minus vsplit
+bind slash exec rofi -show drun
 
 bind c exec kitty
 bind f exec firefox
