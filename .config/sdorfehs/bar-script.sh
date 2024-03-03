@@ -78,7 +78,7 @@ update_sound_status() {
 # ============================================================================>
 
 while true; do
-    output_str="$_separator $sound_info";
+    output_str="$_separator ^ca(1,sh -c 'pavucontrol')$sound_info^ca()";
     
     if [ $_has_batteries -eq 0 ]; then
         output_str="${output_str} $_separator $battery_info";

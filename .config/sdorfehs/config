@@ -14,10 +14,16 @@ exec pipewire &
 # ============================================================================>
 
 set startupmessage 0
+set vscreens 4
 
 # ============================================================================>
 
 escape C-w
+
+definekey top M-F1 vselect 0
+definekey top M-F2 vselect 1
+definekey top M-F3 vselect 2
+definekey top M-F4 vselect 3
 
 definekey top M-1 vselect 0
 definekey top M-2 vselect 1

@@ -291,7 +291,7 @@ $ picom --config ~/.config/picom/picom.conf
 
 ```
 $ sudo xbps-install fcitx5 fcitx5-configtool fcitx5-gtk \
-    fcitx5-hangul fcitx5-qt
+    fcitx5-hangul fcitx5-qt gnome-tweaks
 $ fcitx5-configtool
 ```
 
