@@ -106,8 +106,8 @@ $ nmcli device wifi connect "<SSID>" password "<PASSWORD>"
 ```
 $ sudo xbps-install -u xbps
 $ sudo xbps-install acpi base-devel cmatrix curl dbus elogind eudev \
-    eudev-libudev firefox git gpick kitty neofetch pcmanfm ripgrep \
-    scrot tmux vim wget xorg
+    eudev-libudev firefox git glow gpick kitty neofetch pcmanfm \
+    ripgrep scrot tmux vim wget xorg
 $ sudo rm /var/service/acpid
 $ sudo ln -s /etc/sv/dbus /var/service/
 ```
