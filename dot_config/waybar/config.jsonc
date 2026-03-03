@@ -1,6 +1,6 @@
 {
     "layer": "top",
-    "height": 28,
+    "height": 36,
     "spacing": 4,
     "modules-left": [
         "wlr/taskbar"

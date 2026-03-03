@@ -1,0 +1,46 @@
+<labwc_config>
+
+    <theme>
+        <name>void-esm</name>
+        <cornerRadius>0</cornerRadius>
+        <font name="DungGeunMo" size="12" />
+        <titlebar>
+            <layout>icon:iconify,max,close</layout>
+            <showTitle>yes</showTitle>
+        </titlebar>
+    </theme>
+    
+    <keyboard>
+        <repeatRate>25</repeatRate>
+        <repeatDelay>600</repeatDelay>
+        
+        <keybind key="A-Tab">
+            <action name="NextWindow" />
+        </keybind>
+
+        <keybind key="A-F4">
+            <action name="Close" />
+        </keybind>
+
+        <keybind key="W-Return">
+            <action name="Execute" command="lab-sensible-terminal" />
+        </keybind>
+
+        <keybind key="W-Left">
+            <action name="SnapToEdge" direction="left" combine="yes" />
+        </keybind>
+
+        <keybind key="W-Right">
+            <action name="SnapToEdge" direction="right" combine="yes" />
+        </keybind>
+        
+        <keybind key="W-Up">
+            <action name="SnapToEdge" direction="up" combine="yes" />
+        </keybind>
+        
+        <keybind key="W-Down">
+            <action name="SnapToEdge" direction="down" combine="yes" />
+        </keybind>
+    </keyboard>
+
+</labwc_config>

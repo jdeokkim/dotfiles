@@ -1,0 +1,32 @@
+# ============================================================================>
+
+*.active.bg.color: #d1d4d4
+
+*.border.color: #838788
+
+# ============================================================================>
+
+border.width: 2
+
+# ============================================================================>
+
+menu.items.bg.color: #bfc2c3
+
+menu.width.max: 300
+
+# ============================================================================>
+
+window.active.title.bg.color: #8eb9a2
+window.active.shadow.size: 8
+
+window.button.width: 26
+window.button.height: 26
+
+window.inactive.title.bg.color: #c8cbcc
+window.inactive.shadow.size: 8
+
+window.label.text.justify: center
+
+window.titlebar.padding.width: 1
+
+# ============================================================================>

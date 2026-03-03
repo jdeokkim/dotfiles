@@ -10,6 +10,7 @@ sudo xbps-install Waybar intel-video-accel labwc labwc-menu-generator \
 menu_xml="$HOME/.config/labwc/menu.xml"
 
 mkdir -p "$HOME/.config/labwc/"
+mkdir -p "$HOME/.local/share/themes/void-esm/labwc/"
 
 true > "$menu_xml"
 
