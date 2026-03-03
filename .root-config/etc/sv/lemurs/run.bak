@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# ============================================================================>
+
+tty_num=7
+
+# ============================================================================>
+
+tty="/dev/tty$tty_num"
+
+if command -v fgconsole >/dev/null 2>&1 \
+	&& command -v chvt >/dev/null 2>&1; then
+	active_tty_num="$(fgconsole 2>/dev/null || echo '')"
+
+	if [ -n "$active_tty_num" ] && [ "$active_tty_num" != 'serial' ] \
+		&& [ "$active_tty_num" != "$tty_num" ]; then
+		chvt "$tty_num" 2>/dev/null || true
+	fi
+fi
+
+# ============================================================================>
+
+TERM=linux setterm --msg off <"$tty" >"$tty" 2>/dev/null || true
+TERM=linux setterm --clear=all <"$tty" >"$tty" 2>/dev/null || true
+
+exec agetty --noissue --skip-login \
+	--login-program /usr/bin/lemurs "tty$tty_num" linux
+	
+# ============================================================================>

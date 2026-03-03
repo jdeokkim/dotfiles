@@ -1,0 +1,6 @@
+.backup/
+.root/
+
+LICENSE
+
+*.bak

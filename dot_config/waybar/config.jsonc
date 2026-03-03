@@ -1,0 +1,52 @@
+{
+    "layer": "top",
+    "height": 28,
+    "spacing": 4,
+    "modules-left": [
+        "wlr/taskbar"
+    ],
+    "modules-right": [
+        "network",
+        "wireplumber",
+        "clock"
+    ],
+    "wlr/taskbar": {
+        "format": "{icon} {app_id}",
+        "icon-size": 16,
+        "on-click": "activate"
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "󰛳",
+        "format-disconnected": "",
+        "on-click-right": "alacritty -T 'Network Manager' -e nmtui",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected!"
+    },
+    "wireplumber": {
+        "format": "{icon}",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "alacritty -T 'Volume Mixer' -e wiremix",
+        "tooltip-format": "{node_name}: {volume}%"
+    },
+    "clock": {
+        "format": "{:%H:%M:%S}",
+        "format-alt": "{:%Y/%m/%d}",
+        "interval": 1,
+        "tooltip-format": "{calendar}",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "months": "{}\n",
+                "days": "<span color='#313233'>{}</span>",
+                "weekdays": "<span color='#ffca33'>{}</span>",
+                "today": "<span color='#ff1a66'><u>{}</u></span>"
+            }
+        }
+    }
+}

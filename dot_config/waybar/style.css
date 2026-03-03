@@ -1,0 +1,46 @@
+* {
+    border-radius: 0px;
+    font-family: DungGeunMo, FontAwesome, sans-serif;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #bfc2c3;
+}
+
+window#waybar {
+    background-color: #a4a9aa;
+    border-bottom: 2px solid #626566;
+    color: #202122;
+}
+
+tooltip {
+    background-color: #a4a9aa;
+    border: 2px solid #626566;
+    text-shadow: none;
+}
+
+tooltip label {
+    color: #313233;
+}
+
+#clock, #network, #taskbar button, #wireplumber {
+    border-right: 2px solid #838788;
+    padding-left: 8px;
+    padding-right: 10px;
+}
+
+#network {
+    border-left: 2px solid #838788;
+}
+
+#taskbar button {
+    border-bottom: 2px solid #626566;
+    border-radius: 0px;
+    transition: none;
+}
+
+#taskbar button.active {
+    background-color: #d1d4d4;
+}
+
