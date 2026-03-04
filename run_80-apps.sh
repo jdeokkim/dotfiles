@@ -2,7 +2,7 @@
 
 # ============================================================================>
 
-sudo xbps-install feh firefox grim kitty slurp swappy
+sudo xbps-install alacritty feh firefox-esr grim slurp swappy
 
 # ============================================================================>
 
