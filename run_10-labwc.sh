@@ -20,7 +20,7 @@ printf '%b\n' '<?xml version="1.0" encoding="UTF-8"?>
 <openbox_menu>
 <menu id="root-menu" label="root-menu">' >> "$menu_xml";
 
-labwc-menu-generator -b >> "$menu_xml";
+labwc-menu-generator -b -n >> "$menu_xml";
 
 printf '%b\n' '<separator />
   <item label="Reconfigure">

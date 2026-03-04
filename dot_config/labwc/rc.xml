@@ -26,6 +26,10 @@
             <action name="Execute" command="lab-sensible-terminal" />
         </keybind>
 
+        <keybind key="W-Tab">
+            <action name="GoToDesktop" to="right" wrap="yes" toggle="no" />
+        </keybind>
+
         <keybind key="W-Left">
             <action name="SnapToEdge" direction="left" combine="yes" />
         </keybind>
@@ -42,5 +46,16 @@
             <action name="SnapToEdge" direction="down" combine="yes" />
         </keybind>
     </keyboard>
+    
+    <desktops>
+      <popupTime>1000</popupTime>
+      <initial>1</initial>
+      <names>
+        <name>1</name>
+        <name>2</name>
+        <name>3</name>
+        <name>4</name>
+      </names>
+    </desktops>
 
 </labwc_config>

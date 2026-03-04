@@ -1,9 +1,10 @@
 {
     "layer": "top",
     "height": 36,
-    "spacing": 4,
+    // "spacing": 4,
     "modules-left": [
-        "wlr/taskbar"
+        "wlr/taskbar",
+        "ext/workspaces"
     ],
     "modules-right": [
         "network",
@@ -13,6 +14,11 @@
     "wlr/taskbar": {
         "format": "{icon} {app_id}",
         "icon-size": 16,
+        "on-click": "activate"
+    },
+    "ext/workspaces": {
+        "format": "{name}",
+        "sort-by-number": true,
         "on-click": "activate"
     },
     "network": {

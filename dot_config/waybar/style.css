@@ -6,6 +6,8 @@
 
 button:hover {
     background: #bfc2c3;
+    box-shadow: inherit;
+    text-shadow: inherit;
 }
 
 window#waybar {
@@ -42,5 +44,12 @@ tooltip label {
 
 #taskbar button.active {
     background-color: #d1d4d4;
+}
+
+#workspaces button {
+    border-right: 1px solid #838788;
+    border-bottom: 2px solid #626566;
+    border-radius: 0px;
+    transition: none;
 }
 
