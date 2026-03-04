@@ -22,6 +22,18 @@
             <action name="Close" />
         </keybind>
 
+        <keybind key="Print">
+            <action name="Execute">
+                <command>sh -c 'grim $(xdg-user-dir PICTURES)/$(date +'%s-grim.png')'</command>
+            </action>
+        </keybind>
+
+        <keybind key="A-Print">
+            <action name="Execute">
+                <command>sh -c 'grim -g "$(slurp)" - | swappy -f -'</command>
+            </action>
+        </keybind>
+
         <keybind key="W-Return">
             <action name="Execute" command="lab-sensible-terminal" />
         </keybind>
