@@ -41,8 +41,8 @@
         "tooltip-format": "{node_name}: {volume}%"
     },
     "clock": {
-        "format": "{:%H:%M:%S}",
-        "format-alt": "{:%Y/%m/%d}",
+        "format": "{:%H시 %M분 %S초}",
+        "format-alt": "{:%Y년 %m월 %d일}",
         "interval": 1,
         "tooltip-format": "{calendar}",
         "calendar": {

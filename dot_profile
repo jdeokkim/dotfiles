@@ -1,12 +1,16 @@
-#!/bin/sh
+# ============================================================================>
+
+export XCURSOR_THEME='Vanilla-DMZ'
 
 # ============================================================================>
 
-sudo xbps-install Thunar alacritty feh firefox-esr grim nwg-look \
-    slurp swappy thunar-archive-plugin
+export GLFW_IM_MODULE=ibus
 
-# ============================================================================>
+export GTK_IM_MODULE=wayland
 
-xdg-user-dirs-update
+export QT_IM_MODULES='wayland;ibus'
+export QT_IM_MODULE=ibus
+
+export XMODIFIERS='@im=ibus'
 
 # ============================================================================>
