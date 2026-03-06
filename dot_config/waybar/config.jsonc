@@ -7,6 +7,7 @@
         "ext/workspaces"
     ],
     "modules-right": [
+        "custom/ibus",
         "network",
         "wireplumber",
         "clock"
@@ -20,6 +21,15 @@
         "format": "{name}",
         "sort-by-number": true,
         "on-click": "activate"
+    },
+    "custom/ibus": {
+        "exec": "$HOME/.config/waybar/ibus-hangul.sh 2>/dev/null",
+        "format": "{icon}",
+        "format-icons": {
+            "en": "󰬴",
+            "kr": "󱌳"
+        },
+        "return-type": "json"
     },
     "network": {
         "format-wifi": "",
