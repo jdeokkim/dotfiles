@@ -1,7 +1,7 @@
 <labwc_config>
 
     <theme>
-        <name>void-esm</name>
+        <name>Void-JDK</name>
         <cornerRadius>0</cornerRadius>
         <font name="DungGeunMo" size="12" />
         <titlebar>
