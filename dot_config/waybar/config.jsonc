@@ -10,6 +10,7 @@
         "custom/ibus",
         "network",
         "wireplumber",
+        "battery",
         "clock"
     ],
     "wlr/taskbar": {
@@ -29,7 +30,8 @@
             "en": "󰬴",
             "kr": "󱌳"
         },
-        "return-type": "json"
+        "return-type": "json",
+        "on-click-right": "ibus-setup-hangul"
     },
     "network": {
         "format-wifi": "",
@@ -38,7 +40,7 @@
         "on-click-right": "alacritty -T 'Network Manager' -e nmtui",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname}",
-        "tooltip-format-disconnected": "Disconnected!"
+        "tooltip-format-disconnected": "No Internet!"
     },
     "wireplumber": {
         "format": "{icon}",
@@ -49,6 +51,12 @@
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-click-right": "alacritty -T 'Volume Mixer' -e wiremix",
         "tooltip-format": "{node_name}: {volume}%"
+    },
+    "battery": {
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", ""],
+        "format-time": "{H}시간 {M}분",
+        "tooltip-format": "{capacity}% ({time} 후 충전 완료)"
     },
     "clock": {
         "format": "{:%H시 %M분 %S초}",
