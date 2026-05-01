@@ -34,6 +34,10 @@
             </action>
         </keybind>
 
+        <keybind key="W-d">
+            <action name="ToggleDecorations" />
+        </keybind>
+
         <keybind key="W-Return">
             <action name="Execute" command="lab-sensible-terminal" />
         </keybind>
