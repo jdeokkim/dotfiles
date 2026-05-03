@@ -7,6 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_servers": {
+    "gemini": {
+      "type": "registry"
+    }
+  },
+  "agent": {
+    "sidebar_side": "right",
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "double_click_in_multibuffer": "open",
   "proxy": "",
   "hide_mouse": "never",
   "rounded_selection": false,
