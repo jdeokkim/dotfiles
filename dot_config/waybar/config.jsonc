@@ -56,7 +56,7 @@
         "format": "{icon}",
         "format-icons": ["", "", "", "", ""],
         "format-time": "{H}시간 {M}분",
-        "tooltip-format": "{capacity}% ({time} 후 충전 완료)"
+        "tooltip-format": "{capacity}% ({timeTo})"
     },
     "clock": {
         "format": "{:%H시 %M분 %S초}",
