@@ -3,10 +3,14 @@
 # ============================================================================>
 
 if [ ! -d "/tmp/grub-theme" ]; then
-    git clone https://github.com/tomdewildt/minimal-grub-theme \
+    git clone https://github.com/jdeokkim/minimal-grub-theme \
         /tmp/grub-theme
 fi
 
 make install -C /tmp/grub-theme
+
+# ============================================================================>
+
+
 
 # ============================================================================>
