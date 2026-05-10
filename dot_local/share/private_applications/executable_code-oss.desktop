@@ -2,7 +2,7 @@
 Name=Code - OSS
 Comment=Code Editing. Redefined.
 GenericName=Text Editor
-Exec=/usr/lib/code-oss/bin/code-oss --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto --unity-launch %F
+Exec=/usr/lib/code-oss/bin/code-oss --enable-features=UseOzonePlatform,WaylandWindowDecorations --enable-wayland-ime --ozone-platform-hint=auto --unity-launch --wayland-text-input-version=3 %F
 Icon=code-oss
 Type=Application
 StartupNotify=false
