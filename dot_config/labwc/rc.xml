@@ -38,6 +38,10 @@
             <action name="ToggleDecorations" />
         </keybind>
 
+        <keybind key="W-f">
+            <action name="Execute" command="gtk-launch firefox" />
+        </keybind>
+
         <keybind key="W-Return">
             <action name="Execute" command="lab-sensible-terminal" />
         </keybind>
