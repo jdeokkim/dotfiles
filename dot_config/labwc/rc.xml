@@ -12,7 +12,7 @@
     
     <keyboard>
         <repeatRate>25</repeatRate>
-        <repeatDelay>600</repeatDelay>
+        <repeatDelay>500</repeatDelay>
         
         <keybind key="A-Tab">
             <action name="NextWindow" />
@@ -42,6 +42,10 @@
             <action name="Execute" command="gtk-launch firefox" />
         </keybind>
 
+        <keybind key="W-t">
+            <action name="Execute" command="thunar" />
+        </keybind>
+        
         <keybind key="W-Return">
             <action name="Execute" command="lab-sensible-terminal" />
         </keybind>
@@ -49,7 +53,7 @@
         <keybind key="W-Tab">
             <action name="GoToDesktop" to="right" wrap="yes" toggle="no" />
         </keybind>
-
+        
         <keybind key="W-Left">
             <action name="SnapToEdge" direction="left" combine="yes" />
         </keybind>
