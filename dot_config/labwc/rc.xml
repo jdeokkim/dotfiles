@@ -69,6 +69,14 @@
         <keybind key="W-Down">
             <action name="SnapToEdge" direction="down" combine="yes" />
         </keybind>
+    
+        <keybind key="XF86MonBrightnessUp">
+            <action name="Execute" command="brightnessctl -q set +5%" />
+        </keybind>
+
+        <keybind key="XF86MonBrightnessDown">
+            <action name="Execute" command="brightnessctl -q set 5%-" />
+        </keybind>
     </keyboard>
     
     <desktops>
