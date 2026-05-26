@@ -13,6 +13,8 @@ export MOZ_ENABLE_WAYLAND=1
 export QT_IM_MODULES='wayland;ibus'
 export QT_IM_MODULE=ibus
 
+# export WLR_NO_HARDWARE_CURSORS=1
+
 export XMODIFIERS='@im=ibus'
 
 # ============================================================================>

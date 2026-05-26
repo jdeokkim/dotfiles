@@ -2,7 +2,7 @@
 
 # ============================================================================>
 
-sudo xbps-install blueman bluez libspa-bluetooth pipewire wiremix 
+sudo xbps-install blueman bluez libspa-bluetooth pipewire rtkit wiremix 
 
 sudo mkdir -p /etc/pipewire/pipewire.conf.d/
 

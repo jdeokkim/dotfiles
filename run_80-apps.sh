@@ -3,7 +3,7 @@
 # ============================================================================>
 
 sudo xbps-install Thunar alacritty brightnessctl cscope ctags feh \
-    firefox-esr flatpak grim nwg-look okular slurp strace swappy \
+    firefox-esr flatpak grim nwg-look slurp smartmontools strace swappy \
     thunar-archive-plugin void-repo-nonfree vscode xarchiver \
     xdg-desktop-portal-gtk xdg-desktop-portal-wlr
 

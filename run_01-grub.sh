@@ -2,6 +2,10 @@
 
 # ============================================================================>
 
+sudo xbps-install -S intel-ucode
+
+# ============================================================================>
+
 if [ ! -d "/tmp/grub-theme" ]; then
     git clone https://github.com/jdeokkim/minimal-grub-theme \
         /tmp/grub-theme

@@ -3,7 +3,7 @@
 # ============================================================================>
 
 sudo xbps-install Waybar intel-video-accel labwc labwc-menu-generator \
-    mesa-dri xcursor-vanilla-dmz xdg-user-dirs
+    mesa-dri wl-clipboard xclip xcursor-vanilla-dmz xdg-user-dirs
 
 # ============================================================================>
 
