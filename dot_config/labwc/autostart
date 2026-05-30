@@ -8,7 +8,11 @@ ibus start --type wayland
 
 # ============================================================================>
 
-swaybg -c '#5e9c7b' &
+if [ -d "$HOME/.local/share/backgrounds" ]; then
+    swaybg -i "$HOME/.local/share/backgrounds/void-jdk.png" &
+else
+    swaybg -c '#5e9c7b' &
+fi
 
 waybar >/dev/null 2>&1 &
 
