@@ -1,0 +1,199 @@
+{
+  "main": {
+    "id": "0677355478efb4b3",
+    "type": "split",
+    "children": [
+      {
+        "id": "cf7bc24f70315295",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b6f6166cf22aa32d",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "리얼텍코리아.md",
+                "mode": "source",
+                "source": true
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "리얼텍코리아"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "126df94c94f6ce61",
+    "type": "split",
+    "children": [
+      {
+        "id": "b516c8863d022afc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "190dcfc46a4be55a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "0966cd37f34275cb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3360c626caa72357",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 249.5
+  },
+  "right": {
+    "id": "aa530f92946efaf0",
+    "type": "split",
+    "children": [
+      {
+        "id": "abed05b7b7f6b779",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1a155b2e520880e1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "0ef3f478c893948b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "92329292a76de23f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a3f8fdcc0159e423",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "820d8b0c41b69a60",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "b6f6166cf22aa32d",
+  "lastOpenFiles": [
+    "리얼텍코리아-1921.md",
+    "리얼텍코리아.md",
+    "리얼텍코리아-0119.md",
+    "리얼텍코리아-0048.md",
+    "리얼텍코리아-2141.md",
+    "리얼텍코리아-1916.md",
+    "리얼텍코리아-1842.md",
+    "리얼텍코리아-0110.md",
+    "리얼텍코리아-0057.md",
+    "리얼텍코리아-0529.md",
+    "Welcome.md"
+  ]
+}

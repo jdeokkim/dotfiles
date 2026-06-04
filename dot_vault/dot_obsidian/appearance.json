@@ -1,0 +1,11 @@
+{
+  "theme": "obsidian",
+  "accentColor": "#5e9c71",
+  "cssTheme": "GitHub Theme",
+  "interfaceFontFamily": "42dot Sans",
+  "textFontFamily": "42dot Sans",
+  "monospaceFontFamily": "Source Code Pro",
+  "baseFontSize": 18,
+  "baseFontSizeAction": true,
+  "nativeMenus": false
+}

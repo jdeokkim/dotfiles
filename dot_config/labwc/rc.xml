@@ -50,8 +50,8 @@
             <action name="Execute" command="lab-sensible-terminal" />
         </keybind>
 
-        <keybind key="W-Tab">
-            <action name="GoToDesktop" to="right" wrap="yes" toggle="no" />
+        <keybind key="W-Tab" onRelease="yes">
+            <action name="GoToDesktop" to="right" wrap="yes" toggle="yes" />
         </keybind>
         
         <keybind key="W-Left">
@@ -80,7 +80,7 @@
     </keyboard>
     
     <desktops>
-      <popupTime>1000</popupTime>
+      <popupTime>750</popupTime>
       <initial>1</initial>
       <names>
         <name>1</name>
