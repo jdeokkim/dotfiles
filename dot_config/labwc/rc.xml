@@ -77,6 +77,14 @@
         <keybind key="XF86MonBrightnessDown">
             <action name="Execute" command="brightnessctl -q set 5%-" />
         </keybind>
+    
+        <keybind key="XF86AudioRaiseVolume">
+            <action name="Execute" command="wpctl set-volume -l 0.95 @DEFAULT_AUDIO_SINK@ 5%+" />
+        </keybind>
+
+        <keybind key="XF86AudioLowerVolume">
+            <action name="Execute" command="wpctl set-volume -l 0.95 @DEFAULT_AUDIO_SINK@ 5%-" />
+        </keybind>
     </keyboard>
     
     <desktops>
